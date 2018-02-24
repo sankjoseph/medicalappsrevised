@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "iMateriaMedica", "iMateriaMedica\iMateriaMedica.shproj", "{6223B3E4-FB88-496F-890D-6D858A8A76C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMateriaMedica.iOS", "iOS\iMateriaMedica.iOS.csproj", "{9C35AAFE-A4C9-46B2-B354-026C3EA63194}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Release|iPhone.ActiveCfg = Release|iPhone
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Release|iPhone.Build.0 = Release|iPhone
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{9C35AAFE-A4C9-46B2-B354-026C3EA63194}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal
