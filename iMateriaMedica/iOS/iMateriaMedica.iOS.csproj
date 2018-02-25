@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: JESSY CHANDY (BA9JK9N56G)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchFastDev>true</MtouchFastDev>
@@ -97,6 +97,8 @@
     <Reference Include="Plugin.Connectivity">
       <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.2\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -113,30 +115,68 @@
     <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\xamarin_logo%402x.png" />
     <ImageAsset Include="Assets.xcassets\XamarinLogo.imageset\xamarin_logo%403x.png" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\company.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\company.imageset\logo.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-notification%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-notification%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-spotlight%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-appicon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iphone-appicon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-notification%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-notification%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-settings%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-settings%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-spotlight%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-spotlight%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ipad-appicon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtWork1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtWork58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtWork87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtWork76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\iTunesArtWork167.png" />
+    <ImageAsset Include="Assets.xcassets\Remedies.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Remedies.imageset\remedy_tab.png" />
+    <ImageAsset Include="Assets.xcassets\Search.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Search.imageset\search_tab.png" />
+    <ImageAsset Include="Assets.xcassets\Notes.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Notes.imageset\notes_tab.png" />
+    <ImageAsset Include="Assets.xcassets\Info.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Info.imageset\info_tab.png" />
+    <ImageAsset Include="Assets.xcassets\FAQ.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\FAQ.imageset\faq_tab.png" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewControllers\DetailViewControllers\BrowseItemDetailViewController.cs" />
-    <Compile Include="ViewControllers\DetailViewControllers\BrowseItemDetailViewController.designer.cs">
-      <DependentUpon>BrowseItemDetailViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\AboutViewController.cs" />
-    <Compile Include="ViewControllers\AboutViewController.designer.cs">
-      <DependentUpon>AboutViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\BrowseViewController.cs" />
-    <Compile Include="ViewControllers\BrowseViewController.designer.cs">
-      <DependentUpon>BrowseViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewControllers\ItemNewViewController.cs" />
-    <Compile Include="ViewControllers\ItemNewViewController.designer.cs">
-      <DependentUpon>ItemNewViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewControllers\TabBarController.cs" />
     <Compile Include="ViewControllers\TabBarController.designer.cs">
       <DependentUpon>TabBarController.cs</DependentUpon>
     </Compile>
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="ViewControllers\FAQViewController.cs" />
+    <Compile Include="ViewControllers\FAQViewController.designer.cs">
+      <DependentUpon>FAQViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\InfoViewController.cs" />
+    <Compile Include="ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\NotesViewController.cs" />
+    <Compile Include="ViewControllers\NotesViewController.designer.cs">
+      <DependentUpon>NotesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\RemediesViewController.cs" />
+    <Compile Include="ViewControllers\RemediesViewController.designer.cs">
+      <DependentUpon>RemediesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\SearchViewController.cs" />
+    <Compile Include="ViewControllers\SearchViewController.designer.cs">
+      <DependentUpon>SearchViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewControllers\RemedyDetailedViewController.cs" />
+    <Compile Include="ViewControllers\RemedyDetailedViewController.designer.cs">
+      <DependentUpon>RemedyDetailedViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -146,6 +186,21 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\company.imageset\" />
+    <Folder Include="Assets.xcassets\Remedies.imageset\" />
+    <Folder Include="Assets.xcassets\Search.imageset\" />
+    <Folder Include="Assets.xcassets\Notes.imageset\" />
+    <Folder Include="Assets.xcassets\Info.imageset\" />
+    <Folder Include="Assets.xcassets\FAQ.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\medicaLite.db3" />
+    <BundleResource Include="Resources\Message.htm" />
+    <BundleResource Include="Resources\Notes.db3" />
+    <BundleResource Include="Resources\FAQ.htm" />
   </ItemGroup>
   <Import Project="..\iMateriaMedica\iMateriaMedica.projitems" Label="Shared" Condition="Exists('..\iMateriaMedica\iMateriaMedica.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

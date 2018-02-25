@@ -11,8 +11,8 @@ using UIKit;
 
 namespace iMateriaMedica.iOS
 {
-    [Register ("TabBarController")]
-    partial class TabBarController
+    [Register ("RemediesViewController")]
+    partial class RemediesViewController
     {
         void ReleaseDesignerOutlets ()
         {

@@ -11,11 +11,19 @@ using UIKit;
 
 namespace iMateriaMedica.iOS
 {
-    [Register ("TabBarController")]
-    partial class TabBarController
+    [Register ("RemedyDetailedViewController")]
+    partial class RemedyDetailedViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIWebView myWebView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (myWebView != null) {
+                myWebView.Dispose ();
+                myWebView = null;
+            }
         }
     }
 }
