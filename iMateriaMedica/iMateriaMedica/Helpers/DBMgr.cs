@@ -20,6 +20,8 @@ namespace iMateriaMedica
 
         public List<Remedy> FilteredRemedies;
 
+        public  Dictionary<string, List<Remedy>> genIndexedTableItems;
+        public string[] genKeys;
 
         private static DBMgr instance;
 
@@ -46,6 +48,22 @@ namespace iMateriaMedica
             OpenDatbase(filename,type);
             LoadRemedies();
             FilteredRemedies = RemedyItems.ToList();
+
+            // key based index list
+            genIndexedTableItems = new Dictionary<string, List<Remedy>>();
+            foreach (var t in DBMgr.Instance.RemedyItems)
+            {
+                if (genIndexedTableItems.ContainsKey(t.Name[0].ToString()))
+                {
+                    genIndexedTableItems[t.Name[0].ToString()].Add(t);
+                }
+                else
+                {
+                    genIndexedTableItems.Add(t.Name[0].ToString(), new List<Remedy>() { t });
+                }
+            }
+            genKeys = genIndexedTableItems.Keys.ToArray();
+
         }
         public void OpenDatbase(string filename, string type)
         {

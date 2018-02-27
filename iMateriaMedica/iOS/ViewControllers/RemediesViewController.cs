@@ -1,6 +1,9 @@
 using Foundation;
 using System;
 using UIKit;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace iMateriaMedica.iOS
 {
@@ -8,13 +11,14 @@ namespace iMateriaMedica.iOS
     {
         static readonly NSString CELL_IDENTIFIER = new NSString("ITEM_CELL_REMEDY");
 
+   
         public RemedyDataSource(DBMgr dbMgr)
         {
 
         }
 
-        public override nint RowsInSection(UITableView tableview, nint section) => DBMgr.Instance.RemedyItems.Count;
-        public override nint NumberOfSections(UITableView tableView) => 1;
+        public override nint RowsInSection(UITableView tableview, nint section) => DBMgr.Instance.genIndexedTableItems[DBMgr.Instance.genKeys[section]].Count;
+        public override nint NumberOfSections(UITableView tableView) =>  DBMgr.Instance.genKeys.Length;
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
@@ -25,14 +29,19 @@ namespace iMateriaMedica.iOS
                 cell = new UITableViewCell(UITableViewCellStyle.Value2, CELL_IDENTIFIER);
             }
             // NavigationController.PopToRootViewController(true);
-            var item = DBMgr.Instance.RemedyItems[indexPath.Row];
+            var item = DBMgr.Instance.genIndexedTableItems[DBMgr.Instance.genKeys[indexPath.Section]][indexPath.Row];
             cell.TextLabel.Text = item.Name;
             //cell.DetailTextLabel.Text = item.Name;
             cell.BackgroundColor = Utils.getThemeColor();
             cell.LayoutMargins = UIEdgeInsets.Zero;
             return cell;
         }
+        public override String[] SectionIndexTitles(UITableView tableView)
+        {
+            return DBMgr.Instance.genKeys.ToArray();
+        }
     }
+
     public partial class RemediesViewController : UITableViewController
     {
         public RemediesViewController (IntPtr handle) : base (handle)
@@ -46,6 +55,7 @@ namespace iMateriaMedica.iOS
                 var indexPath = TableView.IndexPathForCell(sender as UITableViewCell);
                 controller.bSearch = false;
                 controller.nCurrentItemIndex = indexPath.Row;
+                controller.nCurrentIndexPath = indexPath; //for the remedies indexed tab
                 TableView.DeselectRow(indexPath, true);
             }
 

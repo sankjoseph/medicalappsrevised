@@ -12,10 +12,11 @@ namespace iMateriaMedica.iOS
     {
         int Max = DBMgr.Instance.RemedyItems.Count - 1; //MAX index 0 to count-1 
         public int nCurrentItemIndex;
+        public NSIndexPath nCurrentIndexPath;
+        private NSIndexPath localCurrentIndexPath;
         public bool bSearch;
         public RemedyDetailedViewController(IntPtr handle) : base(handle)
         {
-
         }
         public override void ViewWillAppear(bool animated)
         {
@@ -29,13 +30,22 @@ namespace iMateriaMedica.iOS
                 return;
             }
 
+
+            int rRowsMax = DBMgr.Instance.genIndexedTableItems[DBMgr.Instance.genKeys[localCurrentIndexPath.Section]].Count-1;
+            if (localCurrentIndexPath.Row >=rRowsMax)
+            {
+                return;
+            }
+                                
+            localCurrentIndexPath = NSIndexPath.FromRowSection(localCurrentIndexPath.Row +1, localCurrentIndexPath.Section);
+  
+            PopulateNewDetails();
+            nCurrentItemIndex++;
             if (nCurrentItemIndex >= Max)// MAX
             {
                 return;
             }
-            nCurrentItemIndex++;
 
-            PopulateNewDetails();
 
         }
         private void OnSwipeDetectedRight()
@@ -44,13 +54,20 @@ namespace iMateriaMedica.iOS
             {
                 return;
             }
+
+            if (localCurrentIndexPath.Row <= 0)
+            {
+                return;
+            }
+
+            localCurrentIndexPath = NSIndexPath.FromRowSection(localCurrentIndexPath.Row -1, localCurrentIndexPath.Section);
+            PopulateNewDetails();
+
+            nCurrentItemIndex--;
             if (nCurrentItemIndex <= 0)
             {
                 return;
             }
-            nCurrentItemIndex--;
-
-            PopulateNewDetails();
         }
         private void PopulateNewDetails()
         {
@@ -68,7 +85,7 @@ namespace iMateriaMedica.iOS
             }
             else
             {
-                remedy = DBMgr.Instance.RemedyItems[nCurrentItemIndex];
+                remedy = DBMgr.Instance.genIndexedTableItems[DBMgr.Instance.genKeys[localCurrentIndexPath.Section]][localCurrentIndexPath.Row];
             }
             string str = Regex.Replace(textHtml, "<NAME>", remedy.Name);
 
@@ -445,8 +462,12 @@ namespace iMateriaMedica.iOS
             myWebView.BackgroundColor = Utils.getThemeColor();
 
             View.BackgroundColor = Utils.getThemeColor();
- 
-            /////
+
+            if (!bSearch)
+            {
+                localCurrentIndexPath = NSIndexPath.FromRowSection(nCurrentIndexPath.Row, nCurrentIndexPath.Section);
+            }
+            ///// disabled as the indexed data not work
             UISwipeGestureRecognizer recognizerLeft = new UISwipeGestureRecognizer(OnSwipeDetectedLeft);
             recognizerLeft.Direction = UISwipeGestureRecognizerDirection.Left;
             View.AddGestureRecognizer(recognizerLeft);
