@@ -1,11 +1,6 @@
 ﻿<Properties StartupConfiguration="{9C35AAFE-A4C9-46B2-B354-026C3EA63194}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="iMateriaMedica Status">
     <Files>
-      <File FileName="iOS/ViewControllers/RemediesViewController.cs" Line="55" Column="43" />
-      <File FileName="iOS/ViewControllers/RemedyDetailedViewController.cs" Line="67" Column="14" />
-      <File FileName="iOS/ViewControllers/SearchViewController.cs" Line="51" Column="1" />
-      <File FileName="iOS/Main.storyboard" />
-      <File FileName="iMateriaMedica/Models/Remedy.cs" Line="12" Column="1" />
       <File FileName="iMateriaMedica Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

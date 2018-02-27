@@ -15,7 +15,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;ENABLE_TEST_CLOUD;STDVERSION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer: JESSY CHANDY (BA9JK9N56G)</CodesignKey>
@@ -145,6 +145,21 @@
     <ImageAsset Include="Assets.xcassets\Info.imageset\info_tab.png" />
     <ImageAsset Include="Assets.xcassets\FAQ.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\FAQ.imageset\faq_tab.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\iphone-appicon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\iphone-appicon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\icon167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIconStd.appiconset\ios-marketing.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ViewControllers\TabBarController.cs" />
@@ -195,12 +210,16 @@
     <Folder Include="Assets.xcassets\Notes.imageset\" />
     <Folder Include="Assets.xcassets\Info.imageset\" />
     <Folder Include="Assets.xcassets\FAQ.imageset\" />
+    <Folder Include="Assets.xcassets\AppiconStd.imageset\" />
+    <Folder Include="Assets.xcassets\AppStd.imageset\" />
+    <Folder Include="Assets.xcassets\AppIconStd.appiconset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\medicaLite.db3" />
     <BundleResource Include="Resources\Message.htm" />
     <BundleResource Include="Resources\Notes.db3" />
     <BundleResource Include="Resources\FAQ.htm" />
+    <BundleResource Include="Resources\medica.db3" />
   </ItemGroup>
   <Import Project="..\iMateriaMedica\iMateriaMedica.projitems" Label="Shared" Condition="Exists('..\iMateriaMedica\iMateriaMedica.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

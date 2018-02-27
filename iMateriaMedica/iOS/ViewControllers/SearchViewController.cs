@@ -5,6 +5,7 @@ using UIKit;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 
 namespace iMateriaMedica.iOS
 {
@@ -46,9 +47,114 @@ namespace iMateriaMedica.iOS
             IEnumerable<Remedy> query =
                 (from item in DBMgr.Instance.RemedyItems
                  where item.Desciption.ToUpper().Contains(searchText.ToUpper())
+                 || item.SubHeading.ToUpper().Contains(searchText.ToUpper())
+                 || item.Mind.ToUpper().Contains(searchText.ToUpper())
+                 || item.Head.ToUpper().Contains(searchText.ToUpper())
+                 || item.Face.ToUpper().Contains(searchText.ToUpper())
+                 || item.Eyes.ToUpper().Contains(searchText.ToUpper())
+                 || item.Ears.ToUpper().Contains(searchText.ToUpper())
+                 || item.Nose.ToUpper().Contains(searchText.ToUpper())
+#if STDVERSION
+                 || item.Mouth.ToUpper().Contains(searchText.ToUpper())
+                 || item.Heart.ToUpper().Contains(searchText.ToUpper())
+                 || item.Chest.ToUpper().Contains(searchText.ToUpper())
+                 || item.Stomach.ToUpper().Contains(searchText.ToUpper())
+                 || item.Abdomen.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rectum.ToUpper().Contains(searchText.ToUpper())
+                 || item.Respiratory.ToUpper().Contains(searchText.ToUpper())
+                 || item.Extremities.ToUpper().Contains(searchText.ToUpper())
+                 || item.Skin.ToUpper().Contains(searchText.ToUpper())
+                 || item.Male.ToUpper().Contains(searchText.ToUpper())
+                 || item.Female.ToUpper().Contains(searchText.ToUpper())
+                 || item.Fever.ToUpper().Contains(searchText.ToUpper())
+                 || item.Back.ToUpper().Contains(searchText.ToUpper())
+                 || item.Sleep.ToUpper().Contains(searchText.ToUpper())
+                 || item.Modalities.ToUpper().Contains(searchText.ToUpper())
+
+                 || item.Rgeneral.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rantidote.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rinimical.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rcompliment.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rcompare.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rcompatible.ToUpper().Contains(searchText.ToUpper())
+                 || item.Rincompatible.ToUpper().Contains(searchText.ToUpper())
+
+
+#endif
                  select item);
 
             DBMgr.Instance.FilteredRemedies = query.ToList();
+
+           
+
+            /*
+             *             ///
+            string keywords = "Rickets Pupils";
+            var keys = keywords.Split(' ');   
+
+  
+            
+
+            IEnumerable<Remedy> query3 =
+   (from item1 in DBMgr.Instance.RemedyItems
+                where keys.Any(k => item1.Desciption.Contains(k))
+                //|| keys.Any(k => item1.Mind.Contains(k))
+                select item1);
+          
+            foreach (string str in keys)  
+        {  
+            Console.WriteLine(str);  
+        }  
+            DBMgr.Instance.FilteredRemedies = query3.ToList();
+*/
+
+
+            /*IEnumerable<Remedy> query3 =
+               (from item1 in DBMgr.Instance.RemedyItems
+                where Regex.IsMatch(item1.Desciption, @"\b(Pupils|Rickets|550)\b")
+                select item1);*/
+              
+
+
+
+            /*searchText = "Pupils";
+            IEnumerable<Remedy> query2 =
+              (from item in DBMgr.Instance.RemedyItems
+               where item.Desciption.ToUpper().Contains(searchText.ToUpper())
+                select item);
+
+            IEnumerable<Remedy> query3 = query.Intersect(query2); 
+
+            DBMgr.Instance.FilteredRemedies = query3.ToList();*/
+
+            
+            /*searchText = "Rickets";
+            IEnumerable<Remedy> query2 =
+     (from item in DBMgr.Instance.RemedyItems
+      where item.Desciption.ToUpper().Contains(searchText.ToUpper())
+      || item.SubHeading.ToUpper().Contains(searchText.ToUpper())
+      || item.Mind.ToUpper().Contains(searchText.ToUpper())
+      || item.Head.ToUpper().Contains(searchText.ToUpper())
+      || item.Face.ToUpper().Contains(searchText.ToUpper())
+      || item.Eyes.ToUpper().Contains(searchText.ToUpper())
+      || item.Ears.ToUpper().Contains(searchText.ToUpper())
+      || item.Nose.ToUpper().Contains(searchText.ToUpper())
+#if STDVERSION
+                 || item.Mouth.ToUpper().Contains(searchText.ToUpper())
+      || item.Heart.ToUpper().Contains(searchText.ToUpper())
+      || item.Chest.ToUpper().Contains(searchText.ToUpper())
+      || item.Stomach.ToUpper().Contains(searchText.ToUpper())
+      || item.Abdomen.ToUpper().Contains(searchText.ToUpper())
+      || item.Rectum.ToUpper().Contains(searchText.ToUpper())
+      || item.Respiratory.ToUpper().Contains(searchText.ToUpper())
+      || item.Extremities.ToUpper().Contains(searchText.ToUpper())
+      || item.Skin.ToUpper().Contains(searchText.ToUpper())
+#endif
+                 select item);
+
+            IEnumerable<Remedy> query3 =  query.Intersect(query2);*/
+
+           
 
             //ItemsDataSource sample = (ItemsDataSource)TableView.Source;
             //sample.SetItemsDataSource(FilteredItems);
@@ -78,6 +184,8 @@ namespace iMateriaMedica.iOS
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+
             TableView.Source = new SearchRemedyDataSource(DBMgr.Instance);
 
             View.BackgroundColor = Utils.getThemeColor();

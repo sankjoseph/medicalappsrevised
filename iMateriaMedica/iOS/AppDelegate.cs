@@ -21,7 +21,13 @@ namespace iMateriaMedica.iOS
             App.Initialize();
 
             //do DBMGR setup;
-            DBMgr.Instance.FullLoad("medicaLite.db3");
+#if STDVERSION
+            DBMgr.Instance.FullLoad("medica","db3");
+
+            #else
+            DBMgr.Instance.FullLoad("medicaLite","db3");
+#endif
+
 
             return true;
         }
