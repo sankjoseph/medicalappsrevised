@@ -21,7 +21,7 @@
                                 <rect key="frame" x="116" y="247" width="202" height="211"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="263" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="0" hidden="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="263" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="0">
                                 <rect key="frame" x="9" y="587" width="393" height="149"/>
                                 <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>

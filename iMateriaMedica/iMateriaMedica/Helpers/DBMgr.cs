@@ -93,7 +93,10 @@ namespace iMateriaMedica
                     "Head,Face,Eyes,Ears,Nose,Mouth,Heart,Chest,Stomach,Abdomen,Rectum," +
                     "Urinary,Respiratory,Extremities,Skin,Male,Female,Fever,Back,Sleep," +
                     "Modalities,Rgeneral,Rantidote,Rinimical,Rcompliment,Rcompare," +
-                    "Rcompatible,Rincompatible FROM [tblRemedies]";
+                    "Rcompatible,Rincompatible,Dose,Throat,Uses,Stool,Tissues,Nerves," +
+                    "Bones,Tongue,Circulatory,Blood,Spine,Bowels,Teeth,Breast," +
+                    "Kidney,Gastro,Spleen,Neck,Urine,PhysiologicDosage,AlimentaryCanal," +
+                    "Liver,Sexual FROM [tblRemedies]";
                 try
                 {
                     //await DataStore.GetItemsAsync(true);
@@ -141,6 +144,29 @@ namespace iMateriaMedica
                             item.Rcompatible = ReplaceText(Convert.ToString(reader[31]));
                             item.Rincompatible = ReplaceText(Convert.ToString(reader[32]));
 
+                            item.Dose = ReplaceText(Convert.ToString(reader[33]));
+                            item.Throat = ReplaceText(Convert.ToString(reader[34]));
+                            item.Uses = ReplaceText(Convert.ToString(reader[35]));
+                            item.Stool = ReplaceText(Convert.ToString(reader[36]));
+                            item.Tissues = ReplaceText(Convert.ToString(reader[37]));
+                            item.Nerves = ReplaceText(Convert.ToString(reader[38]));
+                            item.Bones = ReplaceText(Convert.ToString(reader[39]));
+                            item.Tongue = ReplaceText(Convert.ToString(reader[40]));
+                            item.Circulatory = ReplaceText(Convert.ToString(reader[41]));
+                            item.Blood = ReplaceText(Convert.ToString(reader[42]));
+                            item.Spine = ReplaceText(Convert.ToString(reader[43]));
+                            item.Bowels = ReplaceText(Convert.ToString(reader[44]));
+                            item.Teeth = ReplaceText(Convert.ToString(reader[45]));
+                            item.Breast = ReplaceText(Convert.ToString(reader[46]));
+                            item.Kidney = ReplaceText(Convert.ToString(reader[47]));
+                            item.Gastro = ReplaceText(Convert.ToString(reader[48]));
+                            item.Spleen = ReplaceText(Convert.ToString(reader[49]));
+                            item.Neck = ReplaceText(Convert.ToString(reader[50]));
+                            item.Urine = ReplaceText(Convert.ToString(reader[51]));
+                            item.PhysiologicDosage = ReplaceText(Convert.ToString(reader[52]));
+                            item.AlimentaryCanal = ReplaceText(Convert.ToString(reader[53]));
+                            item.Liver = ReplaceText(Convert.ToString(reader[54]));
+                            item.Sexual = ReplaceText(Convert.ToString(reader[55]));
 
                             RemedyItems.Add(item);
                         }

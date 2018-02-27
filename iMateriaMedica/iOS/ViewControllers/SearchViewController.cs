@@ -70,7 +70,6 @@ namespace iMateriaMedica.iOS
                  || item.Back.ToUpper().Contains(searchText.ToUpper())
                  || item.Sleep.ToUpper().Contains(searchText.ToUpper())
                  || item.Modalities.ToUpper().Contains(searchText.ToUpper())
-
                  || item.Rgeneral.ToUpper().Contains(searchText.ToUpper())
                  || item.Rantidote.ToUpper().Contains(searchText.ToUpper())
                  || item.Rinimical.ToUpper().Contains(searchText.ToUpper())
@@ -78,7 +77,29 @@ namespace iMateriaMedica.iOS
                  || item.Rcompare.ToUpper().Contains(searchText.ToUpper())
                  || item.Rcompatible.ToUpper().Contains(searchText.ToUpper())
                  || item.Rincompatible.ToUpper().Contains(searchText.ToUpper())
-
+                 || item.Dose.ToUpper().Contains(searchText.ToUpper())
+                 || item.Throat.ToUpper().Contains(searchText.ToUpper())
+                 || item.Uses.ToUpper().Contains(searchText.ToUpper())
+                 || item.Stool.ToUpper().Contains(searchText.ToUpper())
+                 || item.Tissues.ToUpper().Contains(searchText.ToUpper())
+                 || item.Nerves.ToUpper().Contains(searchText.ToUpper())
+                 || item.Bones.ToUpper().Contains(searchText.ToUpper())
+                 || item.Tongue.ToUpper().Contains(searchText.ToUpper())
+                 || item.Circulatory.ToUpper().Contains(searchText.ToUpper())
+                 || item.Blood.ToUpper().Contains(searchText.ToUpper())
+                 || item.Spine.ToUpper().Contains(searchText.ToUpper())
+                 || item.Teeth.ToUpper().Contains(searchText.ToUpper())
+                 || item.Breast.ToUpper().Contains(searchText.ToUpper())
+                 || item.Kidney.ToUpper().Contains(searchText.ToUpper())
+                 || item.Gastro.ToUpper().Contains(searchText.ToUpper())
+                 || item.Spleen.ToUpper().Contains(searchText.ToUpper())
+                 || item.Neck.ToUpper().Contains(searchText.ToUpper())
+                 || item.Urine.ToUpper().Contains(searchText.ToUpper())
+                 || item.Urinary.ToUpper().Contains(searchText.ToUpper())
+                 || item.PhysiologicDosage.ToUpper().Contains(searchText.ToUpper())
+                 || item.AlimentaryCanal.ToUpper().Contains(searchText.ToUpper())
+                 || item.Liver.ToUpper().Contains(searchText.ToUpper())
+                 || item.Sexual.ToUpper().Contains(searchText.ToUpper())
 
 #endif
                  select item);

@@ -9,6 +9,7 @@
     <RootNamespace>iMateriaMedica.iOS</RootNamespace>
     <AssemblyName>iMateriaMedica.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,7 +61,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
@@ -72,7 +73,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <IOSDebuggerPort>50117</IOSDebuggerPort>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchArch>ARM64</MtouchArch>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
@@ -192,6 +193,10 @@
     <Compile Include="ViewControllers\RemedyDetailedViewController.designer.cs">
       <DependentUpon>RemedyDetailedViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="LaunchScreenController.cs" />
+    <Compile Include="LaunchScreenController.designer.cs">
+      <DependentUpon>LaunchScreenController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -219,7 +224,10 @@
     <BundleResource Include="Resources\Message.htm" />
     <BundleResource Include="Resources\Notes.db3" />
     <BundleResource Include="Resources\FAQ.htm" />
-    <BundleResource Include="Resources\medica.db3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <Import Project="..\iMateriaMedica\iMateriaMedica.projitems" Label="Shared" Condition="Exists('..\iMateriaMedica\iMateriaMedica.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

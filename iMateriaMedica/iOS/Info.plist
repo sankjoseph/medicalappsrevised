@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>iMateriaMedica</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.mobileadventure.iMM</string>
+	<string>com.mobileadventure.iMMLite</string>
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
@@ -32,8 +32,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

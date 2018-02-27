@@ -9,6 +9,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.iMateriaMedica.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.38110606ae174e8e2e0a7a72efd9d3d475308946" />
+  <MonoDevelop.Ide.ItemProperties.iMateriaMedica.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.38110606ae174e8e2e0a7a72efd9d3d475308946" automaticSigning="False" />
   <MultiItemStartupConfigurations />
 </Properties>
