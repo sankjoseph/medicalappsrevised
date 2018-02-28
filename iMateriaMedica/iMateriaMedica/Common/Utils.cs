@@ -21,5 +21,16 @@ namespace iMateriaMedica
             }
             return true;
         }
+        public static void ShowAlertOK (string message, UIViewController controller)
+        {
+            UIAlertController alert = UIAlertController.Create("Materia Medica", message, UIAlertControllerStyle.Alert);
+
+            // Configure the alert
+            alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, (action) => { }));
+
+            // Display the alert
+            controller.PresentViewController(alert, true, null);
+
+        }
     }
 }

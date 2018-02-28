@@ -1,15 +1,21 @@
 ﻿<Properties StartupConfiguration="{9C35AAFE-A4C9-46B2-B354-026C3EA63194}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="iMateriaMedica Status">
     <Files>
-      <File FileName="iOS/ViewControllers/RemedyDetailedViewController.cs" Line="8" Column="29" />
+      <File FileName="iOS/ViewControllers/NotesViewController.cs" Line="156" Column="52" />
+      <File FileName="iOS/ViewControllers/NotesDetailsViewController.cs" Line="76" Column="22" />
+      <File FileName="iMateriaMedica/Helpers/DBMgrNotes.cs" Line="92" Column="13" />
+      <File FileName="iMateriaMedica/Common/Utils.cs" Line="24" Column="39" />
       <File FileName="iMateriaMedica Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/santhoshjoseph/Projects/medicalappsrevised/iMateriaMedica/iOS/ViewControllers/NotesDetailsViewController.cs" relfile="iOS/ViewControllers/NotesDetailsViewController.cs" line="65" column="1" />
+      <Breakpoint enabled="false" file="/Users/santhoshjoseph/Projects/medicalappsrevised/iMateriaMedica/iOS/ViewControllers/NotesDetailsViewController.cs" relfile="iOS/ViewControllers/NotesDetailsViewController.cs" line="51" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.iMateriaMedica.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EE429FCD-96A7-44F6-B66D-205B554DEE34" automaticSigning="False" />
+  <MonoDevelop.Ide.ItemProperties.iMateriaMedica.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.189E80A0-31EA-4B13-AA3A-876F3279D01C" automaticSigning="False" />
   <MultiItemStartupConfigurations />
 </Properties>

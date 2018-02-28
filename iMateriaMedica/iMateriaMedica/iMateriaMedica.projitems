@@ -21,6 +21,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Remedy.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IDataStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DBMgrNotes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\MMNote.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Common\" />

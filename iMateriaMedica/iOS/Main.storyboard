@@ -178,7 +178,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections/>
+                                <connections>
+                                    <segue id="11856" destination="10355" kind="push" identifier="NoteDetailsSegue"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -186,7 +188,16 @@
                             <outlet property="delegate" destination="3303" id="3307"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="3304"/>
+                    <navigationItem key="navigationItem" id="3304">
+                        <barButtonItem key="leftBarButtonItem" id="10304" style="plain" systemItem="edit">
+                            <connections/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="10308" systemItem="add"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barbtnLeft" destination="10304" id="name-outlet-10304"/>
+                        <outlet property="barbtnRight" destination="10308" id="name-outlet-10308"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3310" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,6 +350,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8197" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="78" y="1415"/>
+        </scene>
+        <scene sceneID="10354">
+            <objects>
+                <viewController id="10355" sceneMemberID="viewController" customClass="NotesDetailsViewController" storyboardIdentifier="NotesDetails">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="10352"/>
+                        <viewControllerLayoutGuide type="bottom" id="10353"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="10356">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" id="11557" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="6" y="102" width="362" height="521"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <accessibility key="accessibilityConfiguration" hint="Please enter your notes"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="12786" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Please enter note name">
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="txtNoteName" destination="12786" id="name-outlet-12786"/>
+                        <outlet property="txtNoteObservations" destination="11557" id="name-outlet-11557"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10357" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-354"/>
         </scene>
     </scenes>
     <resources>

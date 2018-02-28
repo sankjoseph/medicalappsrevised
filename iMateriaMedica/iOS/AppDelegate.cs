@@ -20,6 +20,8 @@ namespace iMateriaMedica.iOS
         {
             App.Initialize();
 
+
+
             //do DBMGR setup;
 #if STDVERSION
             DBMgr.Instance.FullLoad("medica","db3");
@@ -27,7 +29,16 @@ namespace iMateriaMedica.iOS
             #else
             DBMgr.Instance.FullLoad("medicaLite","db3");
 #endif
-
+          
+#if STDVERSION
+            DBMgrNotes.Instance.FullLoad("Notes","db3");
+#endif
+ 
+            //MMNote sample2 = new MMNote();
+            //sample2.Id = "3";
+            //sample2.Name = "Use paid version for all features";
+            //sample2.Observations = "samples";
+            //DBMgrNotes.Instance.InsertNote(sample2);
 
             return true;
         }

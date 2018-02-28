@@ -11,27 +11,27 @@ using UIKit;
 
 namespace iMateriaMedica.iOS
 {
-    [Register ("NotesViewController")]
-    partial class NotesViewController
+    [Register ("NotesDetailsViewController")]
+    partial class NotesDetailsViewController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIBarButtonItem barbtnLeft { get; set; }
+        UIKit.UITextField txtNoteName { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIBarButtonItem barbtnRight { get; set; }
+        UIKit.UITextView txtNoteObservations { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (barbtnLeft != null) {
-                barbtnLeft.Dispose ();
-                barbtnLeft = null;
+            if (txtNoteName != null) {
+                txtNoteName.Dispose ();
+                txtNoteName = null;
             }
 
-            if (barbtnRight != null) {
-                barbtnRight.Dispose ();
-                barbtnRight = null;
+            if (txtNoteObservations != null) {
+                txtNoteObservations.Dispose ();
+                txtNoteObservations = null;
             }
         }
     }
