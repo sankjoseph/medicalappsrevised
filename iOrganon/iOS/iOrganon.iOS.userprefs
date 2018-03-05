@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{323F0033-0C2E-4419-B5F8-720CCD393AC1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppDelegate.cs">
+    <Files>
+      <File FileName="AppDelegate.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/santhoshjoseph/Projects/medicalappsrevised/iOrganon/iOS/ViewControllers/IntroDetailViewController.cs" relfile="ViewControllers/IntroDetailViewController.cs" line="56" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.iOrganon.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.189E80A0-31EA-4B13-AA3A-876F3279D01C" />
+</Properties>

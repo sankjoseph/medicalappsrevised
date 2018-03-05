@@ -1,0 +1,83 @@
+{
+  "author" : "Iconizer",
+  "version" : "1.0",
+  "images" : [
+    {
+      "filename" : "watch_quickLook-38mm@2x.png",
+      "idiom" : "watch",
+      "subtype" : "38mm",
+      "scale" : "2x",
+      "size" : "86x86",
+      "expected-size" : "172",
+      "role" : "quickLook"
+    },
+    {
+      "filename" : "watch_appLauncher-38mm@2x.png",
+      "idiom" : "watch",
+      "subtype" : "38mm",
+      "scale" : "2x",
+      "size" : "40x40",
+      "expected-size" : "80",
+      "role" : "appLauncher"
+    },
+    {
+      "filename" : "watch_quickLook-42mm@2x.png",
+      "idiom" : "watch",
+      "subtype" : "42mm",
+      "scale" : "2x",
+      "size" : "98x98",
+      "expected-size" : "196",
+      "role" : "quickLook"
+    },
+    {
+      "filename" : "watch_notificationCenter-38mm@2x.png",
+      "idiom" : "watch",
+      "subtype" : "38mm",
+      "scale" : "2x",
+      "size" : "24x24",
+      "expected-size" : "48",
+      "role" : "notificationCenter"
+    },
+    {
+      "filename" : "watch_notificationCenter-42mm@2x.png",
+      "idiom" : "watch",
+      "subtype" : "42mm",
+      "scale" : "2x",
+      "size" : "27.5x27.5",
+      "expected-size" : "55",
+      "role" : "notificationCenter"
+    },
+    {
+      "size" : "29x29",
+      "filename" : "watch_companionSettings-@3x.png",
+      "expected-size" : "87",
+      "idiom" : "watch",
+      "role" : "companionSettings",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "watch_longLook-42mm@2x.png",
+      "idiom" : "watch",
+      "subtype" : "42mm",
+      "scale" : "2x",
+      "size" : "44x44",
+      "expected-size" : "88",
+      "role" : "longLook"
+    },
+    {
+      "size" : "29x29",
+      "filename" : "watch_companionSettings-@2x.png",
+      "expected-size" : "58",
+      "idiom" : "watch",
+      "role" : "companionSettings",
+      "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "filename" : "watch-marketing.png",
+      "expected-size" : "1024",
+      "idiom" : "watch-marketing",
+      "scale" : "1x"
+    }
+  ]
+}
