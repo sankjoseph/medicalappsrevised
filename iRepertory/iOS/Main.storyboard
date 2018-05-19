@@ -221,7 +221,7 @@
                                 <rect key="frame" x="87" y="253" width="201" height="112"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0.1.0&#xA;Crafted and marketed by Intimazione&#xA;Web www.intimazioneglobal.com&#xA;Email info@intimazioneglobal.com" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8476" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0" fixedFrame="YES">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.1.1.0&#xA;Crafted and marketed by Intimazione&#xA;Web www.intimazioneglobal.com&#xA;Email info@intimazioneglobal.com" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8476" translatesAutoresizingMaskIntoConstraints="NO" numberOfLines="0" fixedFrame="YES">
                                 <rect key="frame" x="16" y="77" width="343" height="120"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="0.49803921568627452" blue="0" alpha="1"/>
@@ -349,10 +349,9 @@
         <image name="Index" width="32" height="32"/>
         <image name="Search" width="27" height="27"/>
         <image name="Info" width="25" height="25"/>
-        <image name="company" width="300" height="171"/>
+        <image name="company" width="198" height="113"/>
         <image name="left" width="20" height="20"/>
         <image name="right" width="20" height="20"/>
-        <image name="xamarin" width="198" height="113"/>
         <image name="logo1xedite.png" width="300" height="171"/>
     </resources>
 </document>
